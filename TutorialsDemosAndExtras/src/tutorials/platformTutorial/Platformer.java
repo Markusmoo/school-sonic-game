@@ -14,7 +14,11 @@ import java.awt.Graphics2D;
  * @author Michael
  */
 public class Platformer extends GameEngine{
-    public static final int SCREEN_WIDTH = 1024;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static final int SCREEN_WIDTH = 1024;
     public static final int SCREEN_HEIGHT = 768;
     
     public Platformer(){

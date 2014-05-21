@@ -57,10 +57,10 @@ public class SonicSprite extends Body {
         SonicState sonicStateOnEntry = sonicState;
         
         //TODO
-        if(this.x > Platformer.SCREEN_WIDTH){
+        if(this.x > gameLayer.viewPortScreenX + gameLayer.viewPortWidth){
         	this.setPosition(Platformer.SCREEN_WIDTH, this.y);
-        }else if(this.x < 0){
-        	this.setPosition(0, this.y);
+        }else if(this.x < gameLayer.viewPortScreenX){
+        	this.setPosition(0, gameLayer.viewPortScreenX);
         }
         
         if(id==1){
