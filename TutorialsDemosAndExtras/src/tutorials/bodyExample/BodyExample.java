@@ -30,7 +30,7 @@ public class BodyExample extends GameEngine {
         gameStart(currentDisplayMode.getWidth(),
                 currentDisplayMode.getHeight(),
                 currentDisplayMode.getBitDepth());
-        
+        //Hi my name is billy and i like to suck dick
     }
     
     public static void main(String[] args){
