@@ -1,0 +1,94 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// HappyFace sound effects                                                                  //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// SoundAssetClip name continuallyPLayClip URL
+// SoundAssetAssembly name clipAssemblySize URL
+// MidiAsset name continuallyPlayMIDI URL
+
+SoundAssetAssembly SmallBombExplosion 3       		SmallBombExplosion.wav
+SoundAssetAssembly MediumBombExplosion 3       		MediumBombExplosion.wav
+SoundAssetAssembly LargeBombExplosion 3       		LargeBombExplosion.wav
+
+SoundAssetAssembly FuseIgnited 3       			FuseIgnited.wav
+
+SoundAssetClip EdgeCrack1 false 			EdgeCrack1.wav
+SoundAssetClip EdgeCrack2 false 			EdgeCrack2.wav
+SoundAssetClip EdgeCrack3 false 			EdgeCrack3.wav
+
+SoundAssetClip RockCrackLarge1 false 			RockCrackLarge1.wav
+SoundAssetClip RockCrackLarge2 false 			RockCrackLarge2.wav
+SoundAssetClip RockCrackLarge3 false 			RockCrackLarge3.wav
+SoundAssetClip RockCrackLarge4 false 			RockCrackLarge4.wav
+SoundAssetClip RockCrackLarge5 false 			RockCrackLarge5.wav
+SoundAssetClip RockCrackLarge6 false 			RockCrackLarge6.wav
+SoundAssetClip RockCrackLarge7 false 			RockCrackLarge7.wav
+SoundAssetClip RockCrackLarge8 false 			RockCrackLarge8.wav
+
+SoundAssetClip RockCrackSmall1 false 			RockCrackSmall1.wav
+SoundAssetClip RockCrackSmall2 false 			RockCrackSmall2.wav
+SoundAssetClip RockCrackSmall3 false 			RockCrackSmall3.wav
+SoundAssetClip RockCrackSmall4 false 			RockCrackSmall4.wav
+SoundAssetClip RockCrackSmall5 false 			RockCrackSmall5.wav
+SoundAssetClip RockCrackSmall6 false 			RockCrackSmall6.wav
+SoundAssetClip RockCrackSmall7 false 			RockCrackSmall7.wav
+SoundAssetClip RockCrackSmall8 false 			RockCrackSmall8.wav
+
+SoundAssetClip EmoticonLand false 			EmoticonLand.wav
+SoundAssetClip EmoticonLandHard false 			EmoticonLandHard.wav
+
+SoundAssetAssembly EmoticonDevilJump 1 			EmoticonDevilJump.wav
+
+SoundAssetAssembly Emoticon1Jump 3 			Emoticon1Jump.wav
+SoundAssetAssembly Emoticon2Jump 3 			Emoticon2Jump.wav
+SoundAssetAssembly Emoticon3Jump 3 			Emoticon3Jump.wav
+SoundAssetAssembly Emoticon4Jump 3 			Emoticon4Jump.wav
+
+SoundAssetAssembly EmoticonDead1 2 			EmoticonDead1.wav
+SoundAssetAssembly EmoticonDead2 2 			EmoticonDead2.wav
+
+SoundAssetClip Emoticon1Hit false 			Emoticon1Hit.wav
+SoundAssetClip Emoticon2Hit false 			Emoticon2Hit.wav
+SoundAssetClip Emoticon3Hit false 			Emoticon3Hit.wav
+SoundAssetClip Emoticon4Hit false 			Emoticon4Hit.wav
+
+SoundAssetClip EmoticonDestroyerHit false 		EmoticonDestroyerHit.wav
+
+SoundAssetClip EmoticonDevilHit false 			EmoticonDevilHit.wav
+SoundAssetClip EmoticonDevilDead false 			EmoticonDevilDead.wav
+
+SoundAssetClip EmoticonBossDead false 			EmoticonBossDead.wav
+SoundAssetClip EmoticonBossHit false 			EmoticonBossHit.wav
+
+SoundAssetClip EmoticonGhostDead false 			EmoticonGhostDead.wav
+SoundAssetClip EmoticonGhostHit false 			EmoticonGhostHit.wav
+
+SoundAssetClip EmoticonFloaterDead false 		EmoticonFloaterDead.wav
+SoundAssetClip EmoticonFloaterHit false 		EmoticonFloaterHit.wav
+
+SoundAssetClip EmoticonAngelDead false 			EmoticonAngelDead.wav
+SoundAssetClip EmoticonAngelHit false 			EmoticonAngelHit.wav
+
+SoundAssetClip EmoticonRescue false 			EmoticonRescue.wav
+
+SoundAssetAssembly CollectBomb 2 			CollectBomb.wav
+SoundAssetAssembly CollectHealth 2 			CollectHealth.wav
+SoundAssetAssembly CollectExtraLife 2 			CollectExtraLife.wav
+SoundAssetAssembly CollectHealth 2 			CollectHealth.wav
+SoundAssetAssembly CollectDiamond 2 			CollectDiamond.wav
+
+SoundAssetAssembly InteractiveBounce 3 			InteractiveBounce.wav
+
+SoundAssetClip LiquidLava true 				LiquidLava.wav
+SoundAssetClip LiquidAcid true 				LiquidAcid.wav
+SoundAssetClip LiquidWater true 			LiquidWater.wav
+
+SoundAssetClip	MouseClick false 			MouseClick.wav
+SoundAssetAssembly MouseRollover 3 			MouseRollover.wav
+
+MidiAsset   Tutorial true 				Tutorial.mid
+MidiAsset   JailBreak true 				JailBreak.mid
+MidiAsset   TheLongClimb true 				TheLongClimb.mid
+MidiAsset   BootCamp true 				BootCamp.mid
+MidiAsset   FortressOfIce true 				FortressOfIce.mid
+MidiAsset   Heaven true 				Heaven.mid

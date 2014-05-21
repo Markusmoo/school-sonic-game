@@ -1,0 +1,28 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Sequence Asset Test Image Assets                                                         //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// ImageAsset name URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame URLs numURLs URL...
+
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Segments numSegments URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Array numImagesWide numImagesHigh URL
+// ImageAssetSequence name Nonanimated URLs numURLs URL...
+// ImageAssetSequence name Nonanimated Segments numSegments URL
+// ImageAssetSequence name Nonanimated Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Nonanimated Array numImagesWide, numImagesHigh URL
+// ImageAssetRibbon name viewPortX viewPortY width height scrollDirection numURLs URL...
+// ImageAssetTile name viewPortX viewPortY width height URL
+
+
+
+ImageAsset Road             Road.jpg
+
+ImageAssetSequence BuilderHitting Animated -1 1000 0 URLs 11 nailing0.png nailing1.png nailing2.png nailing3.png nailing4.png nailing5.png nailing6.png nailing7.png nailing8.png nailing9.png nailing10.png
+
+ImageAssetSequence BuilderWaiting Animated -1 1000 0 URLs 8 paused0.png paused1.png paused2.png paused3.png paused4.png paused5.png paused6.png paused7.png 
+
+ImageAssetSequence BuilderWalking Animated -1 1000 0 URLs 8 walking0.png walking1.png walking2.png walking3.png walking4.png walking5.png walking6.png walking7.png 
+    
+                

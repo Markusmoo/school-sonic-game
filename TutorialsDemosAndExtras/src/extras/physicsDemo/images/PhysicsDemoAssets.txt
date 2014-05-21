@@ -1,0 +1,41 @@
+ImageAsset Circle1                                 Circle1.png
+ImageAsset Circle2                                 Circle2.png
+ImageAsset Circle3                                 Circle3.png
+ImageAsset Circle4                                 Circle4.png
+ImageAsset Circle5                                 Circle5.png
+
+ImageAsset SmallCircle1                            SmallCircle1.png
+ImageAsset SmallCircle2                            SmallCircle2.png
+ImageAsset SmallCircle3                            SmallCircle3.png
+ImageAsset SmallCircle4                            SmallCircle4.png
+ImageAsset SmallCircle5                            SmallCircle5.png
+
+ImageAsset GlassSquare1                            GlassSquare1.png
+ImageAsset GlassSquare2                            GlassSquare2.png
+ImageAsset GlassSquare3                            GlassSquare3.png
+ImageAsset GlassSquare4                            GlassSquare4.png
+ImageAsset GlassSquare5                            GlassSquare5.png
+ImageAsset GlassSquare6                            GlassSquare6.png
+
+ImageAsset Edge1                                   Edge1.png
+ImageAsset Edge2                                   Edge2.png
+ImageAsset Edge3                                   Edge3.png
+ImageAsset Edge4                                   Edge4.png
+
+ImageAsset Block1                                  Block1.png
+ImageAsset Block2                                  Block2.png
+ImageAsset Block3                                  Block3.png
+
+ImageAsset Brick1                                  Brick1.png
+ImageAsset Brick2                                  Brick2.png
+ImageAsset Brick3                                  Brick3.png
+ImageAsset Brick4                                  Brick4.png
+ImageAsset Brick5                                  Brick5.png
+ImageAsset Brick6                                  Brick6.png
+ImageAsset Brick7                                  Brick7.png
+
+ImageAsset Truck			           Truck.png
+
+ImageAsset MouseCrosshair			   MouseCrosshair.png
+
+ImageAsset ThinEdge		 		   ThinEdge.png

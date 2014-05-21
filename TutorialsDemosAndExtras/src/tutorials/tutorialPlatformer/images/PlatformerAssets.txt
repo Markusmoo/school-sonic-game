@@ -1,0 +1,32 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Platformer Image Assets                                                                  //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// ImageAsset name URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame URLs numURLs URL...
+
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Segments numSegments URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Array numImagesWide numImagesHigh URL
+// ImageAssetSequence name Nonanimated URLs numURLs URL...
+// ImageAssetSequence name Nonanimated Segments numSegments URL
+// ImageAssetSequence name Nonanimated Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Nonanimated Array numImagesWide, numImagesHigh URL
+// ImageAssetRibbon name viewPortX viewPortY width height scrollDirection numURLs URL...
+// ImageAssetTile name viewPortX viewPortY width height URL
+
+
+ImageAsset Ball1						Ball1.png
+ImageAsset Ball2						Ball2.png
+ImageAsset Ball3						Ball3.png
+ImageAsset Ball4						Ball4.png
+ImageAsset Ball5						Ball5.png
+
+ImageAsset Platform						Platform.png
+
+
+ImageAssetSequence SonicJumping	Animated 1 500 2 Segments 3	SonicJumping.png
+ImageAssetSequence SonicRunning	Animated -1 1000 0 Segments 8	SonicRunning.png
+ImageAsset SonicWaiting						SonicWaiting.png
+
+ImageAssetRibbon Background 0 0 1024 768 Horizontal 1  		Background.png        

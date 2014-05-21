@@ -1,0 +1,9 @@
+ImageAsset GreenCircle1 GreenCircle1.png
+ImageAsset GreenCircle2 GreenCircle2.png
+ImageAsset GreenCircle3 GreenCircle3.png
+
+ImageAsset BlueCircle1 BlueCircle1.png
+ImageAsset BlueCircle2 BlueCircle2.png
+ImageAsset BlueCircle3 BlueCircle3.png
+
+ImageAsset PurpleCircle1 PurpleCircle1.png

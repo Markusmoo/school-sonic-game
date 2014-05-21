@@ -1,0 +1,22 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Tiled Asset Test Image Assets                                                            //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// ImageAsset name URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame URLs numURLs URL...
+
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Segments numSegments URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Array numImagesWide numImagesHigh URL
+// ImageAssetSequence name Nonanimated URLs numURLs URL...
+// ImageAssetSequence name Nonanimated Segments numSegments URL
+// ImageAssetSequence name Nonanimated Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Nonanimated Array numImagesWide, numImagesHigh URL
+// ImageAssetRibbon name viewPortX viewPortY width height scrollDirection numURLs URL...
+// ImageAssetTile name viewPortX viewPortY width height URL
+
+ImageAssetTile Tile1    0 0 500 350 Tile1.png
+ImageAssetTile Tile2    0 0 500 350 Tile2.png
+ImageAssetTile Tile3    0 0 500 350 Tile3.png
+ImageAssetTile Tile4    0 0 500 350 Tile4.png
+
