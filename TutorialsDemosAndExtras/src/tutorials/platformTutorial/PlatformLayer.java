@@ -5,6 +5,9 @@
  */
 
 package tutorials.platformTutorial;
+import java.awt.Graphics;
+import java.util.Random;
+
 import game.assets.*; import game.engine.*;
 import game.physics.*; import game.geometry.*;
 
@@ -14,10 +17,13 @@ import game.physics.*; import game.geometry.*;
  */
 public class PlatformLayer extends CollisionSpace {
 	
+	Random rand;
     public static final double GRAVITY_STRENGTH = 800.0;
 	
     public PlatformLayer(GameEngine gameEngine){
         super("PlatformLayer", gameEngine);
+        
+        rand = new Random();
         
         width = 10000;
         height = gameEngine.screenHeight;
@@ -57,7 +63,7 @@ public class PlatformLayer extends CollisionSpace {
             createPlatform(groundOffset, this.height - assetManager.retrieveGraphicalAssetArchetype("Platform").height);
             groundOffset += assetManager.retrieveGraphicalAssetArchetype("Platform").width;
         }
-        for(int idx = 0; idx < 8; idx++)
+        /*for(int idx = 0; idx < 8; idx++)
             createPlatform(300+150 * idx, this.height-50*(idx+1));
         for(int idx = 0; idx < 8; idx++)
             createPlatform(2500-150 * idx, this.height-50*(idx+1));
@@ -68,7 +74,20 @@ public class PlatformLayer extends CollisionSpace {
         for(int idx = 0; idx < 12; idx++)
             createPlatform(6000, this.height-50*(idx+1));
         for(int idx = 0; idx < 12; idx++)
-            createPlatform(7200, this.height-50*(idx+1));
+            createPlatform(7200, this.height-50*(idx+1));*/
+        
+        for(int idx = 0; idx < 8; idx++)
+            createPlatform(300+rand.nextInt(350) * idx, this.height-50*(idx+1));
+        for(int idx = 0; idx < 8; idx++)
+            createPlatform(2500-rand.nextInt(250) * idx, this.height-50*(idx+1));
+        for(int idx = 0; idx < 5; idx++)
+            createPlatform(3500-rand.nextInt(400)* (idx%2), this.height-100*(idx+1));
+        for(int idx = 0; idx < 10; idx++)
+            createPlatform(4500+rand.nextInt(250)* idx, this.height-50*(idx+1));
+        for(int idx = 0; idx < 12; idx++)
+            createPlatform(6000+rand.nextInt(9000), this.height-50*(idx+1));
+        for(int idx = 0; idx < 12; idx++)
+            createPlatform(7200+rand.nextInt(9000), this.height-50*(idx+1));
     }
     private void createPlatform(double x, double y){
         Body platform = new Body(this);
@@ -92,17 +111,21 @@ public class PlatformLayer extends CollisionSpace {
         updateViewPort();
         updateGameObjects();
     }
+    
+    boolean canUpdateViewPort = true;
     private void updateViewPort(){
-        GameObject sonic = getGameObject("Sonic1");
-        GameObject sonic2 = getGameObject("Sonic2");
-        
-        centerViewportOnGameObject(sonic, 0.0, 0.0, gameEngine.screenWidth/2.0, gameEngine.screenHeight/2.0);
-        centerViewportOnGameObject(sonic2, 0.0, 0.0, gameEngine.screenWidth/2.0, gameEngine.screenHeight/2.0);
-        
-        GameObject background = gameEngine.getGameObjectFromLayer("Background","BackgroundLayer");
-        ((ImageAssetRibbon) background.getRealisation(0)).setViewPort(
-        (int)viewPortLayerX,0);
-        background.getRealisation(0).update();
+    	if(canUpdateViewPort == true){
+	        GameObject sonic = getGameObject("Sonic1");
+	        GameObject sonic2 = getGameObject("Sonic2");
+	        
+	        centerViewportOnGameObject(sonic, 0.0, 0.0, gameEngine.screenWidth/2.0, gameEngine.screenHeight/2.0);
+	        centerViewportOnGameObject(sonic2, 0.0, 0.0, gameEngine.screenWidth/2.0, gameEngine.screenHeight/2.0);
+	        
+	        GameObject background = gameEngine.getGameObjectFromLayer("Background","BackgroundLayer");
+	        ((ImageAssetRibbon) background.getRealisation(0)).setViewPort(
+	        (int)viewPortLayerX,0);
+	        background.getRealisation(0).update();
+    	}
     }
     
     private void keepOnScreen(GameObject[] objectArray){
@@ -114,15 +137,27 @@ public class PlatformLayer extends CollisionSpace {
     		}else if(object.x < viewX-gameEngine.screenWidth/2){
     			object.setPosition(viewX-gameEngine.screenWidth/2, object.y);
     		}
+    		
+    		if(object.x > viewX+gameEngine.screenWidth*0.75){
+        		canUpdateViewPort = false;
+        	}else if(object.x < viewX-gameEngine.screenWidth*0.75){
+        		canUpdateViewPort = false;
+        	}else{
+        		canUpdateViewPort = true;
+        	}
     	}
+    }
+    
+    private void draw(Graphics g){
+    	
     }
     
     private void updateGameObjects(){
         GameObject sonic = getGameObject("Sonic1");
         GameObject sonic2 = getGameObject("Sonic2");
+        keepOnScreen(new GameObject[]{sonic2,sonic});
         sonic.update();
         sonic2.update();
-        keepOnScreen(new GameObject[]{sonic2,sonic});
         GameObjectUtilities.reboundIfGameLayerExited(sonic);
         GameObjectUtilities.reboundIfGameLayerExited(sonic2);
     }
