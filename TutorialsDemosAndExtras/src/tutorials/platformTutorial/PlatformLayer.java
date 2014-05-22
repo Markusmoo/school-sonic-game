@@ -13,7 +13,9 @@ import game.physics.*; import game.geometry.*;
  * @author Michael
  */
 public class PlatformLayer extends CollisionSpace {
+	
     public static final double GRAVITY_STRENGTH = 800.0;
+	
     public PlatformLayer(GameEngine gameEngine){
         super("PlatformLayer", gameEngine);
         
@@ -103,11 +105,24 @@ public class PlatformLayer extends CollisionSpace {
         background.getRealisation(0).update();
     }
     
+    private void keepOnScreen(GameObject[] objectArray){
+    	GameObject background = gameEngine.getGameObjectFromLayer("Background","BackgroundLayer");
+    	int viewX = ((ImageAssetRibbon) background.getRealisation(0)).getViewPortX();
+    	for(GameObject object : objectArray){
+    		if(object.x > viewX+gameEngine.screenWidth/2){
+    			object.setPosition(viewX+gameEngine.screenWidth/2, object.y);
+    		}else if(object.x < viewX-gameEngine.screenWidth/2){
+    			object.setPosition(viewX-gameEngine.screenWidth/2, object.y);
+    		}
+    	}
+    }
+    
     private void updateGameObjects(){
         GameObject sonic = getGameObject("Sonic1");
         GameObject sonic2 = getGameObject("Sonic2");
         sonic.update();
         sonic2.update();
+        keepOnScreen(new GameObject[]{sonic2,sonic});
         GameObjectUtilities.reboundIfGameLayerExited(sonic);
         GameObjectUtilities.reboundIfGameLayerExited(sonic2);
     }

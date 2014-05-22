@@ -56,13 +56,6 @@ public class SonicSprite extends Body {
 	public void update(){
         SonicState sonicStateOnEntry = sonicState;
         
-        //TODO
-        if(this.x > gameLayer.viewPortScreenX + gameLayer.viewPortWidth){
-        	this.setPosition(Platformer.SCREEN_WIDTH, this.y);
-        }else if(this.x < gameLayer.viewPortScreenX){
-        	this.setPosition(0, gameLayer.viewPortScreenX);
-        }
-        
         if(id==1){
 	        if(inputEvent.keyPressed[KeyEvent.VK_UP] && !inputEvent.keyPressed[KeyEvent.VK_DOWN]){
 	            velocityy -= SPRITE_BASE_FLY_VELOCITY;
@@ -142,11 +135,20 @@ public class SonicSprite extends Body {
                 if(this.velocityy < SPRITE_BASE_JUMP_VELOCITY)
                     sonicState = SonicState.WAITING;
         
-        if(inputEvent.keyPressed[KeyEvent.VK_SPACE]){
-            if(touchingPlatform){
-                sonicState = SonicState.JUMPING;
-                velocityy -= SPRITE_BASE_JUMP_VELOCITY;
-            }
+        if(id == 1){
+	        if(inputEvent.keyPressed[KeyEvent.VK_NUMPAD0]){
+	            if(touchingPlatform){
+	                sonicState = SonicState.JUMPING;
+	                velocityy -= SPRITE_BASE_JUMP_VELOCITY;
+	            }
+	        }
+        }else if(id == 2){
+	        if(inputEvent.keyPressed[KeyEvent.VK_SPACE]){
+	            if(touchingPlatform){
+	                sonicState = SonicState.JUMPING;
+	                velocityy -= SPRITE_BASE_JUMP_VELOCITY;
+	            }
+	        }
         }
         if(velocityy>((CollisionSpace)gameLayer).getGravityY() / 10.0)
             sonicState = SonicState.JUMPING;
