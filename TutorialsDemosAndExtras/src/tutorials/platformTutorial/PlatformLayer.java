@@ -14,6 +14,7 @@ import game.geometry.Box;
 import game.physics.Body;
 import game.physics.CollisionSpace;
 
+import java.lang.reflect.Array;
 import java.util.Random;
 
 
@@ -38,7 +39,6 @@ public class PlatformLayer extends CollisionSpace {
         createBackground();
         createPlatforms();
         createCharacter();
-        
     }
     private void createBackground(){
         GameLayer backgroundLayer = new GameLayer("BackgroundLayer", this.gameEngine);
@@ -126,13 +126,13 @@ public class PlatformLayer extends CollisionSpace {
     
     boolean canUpdateViewPort = true;
     private void updateViewPort(){
-    	//if(canUpdateViewPort){ //TODO What does Murtha prefer?
+    	if(canUpdateViewPort){ //TODO What does Murtha prefer?
     		GameObject sonic = getGameObject("Sonic1");
     		GameObject sonic2 = getGameObject("Sonic2");
 	        
 	        centerViewportOnGameObject(sonic, 0.0, 0.0, gameEngine.screenWidth/2.0, gameEngine.screenHeight/2.0);
 	        centerViewportOnGameObject(sonic2, 0.0, 0.0, gameEngine.screenWidth/2.0, gameEngine.screenHeight/2.0);
-    	//}
+    	}
 	    GameObject background = gameEngine.getGameObjectFromLayer("Background","BackgroundLayer");
 	    ((ImageAssetRibbon) background.getRealisation(0)).setViewPort(
 	    (int)viewPortLayerX,0);
@@ -142,6 +142,7 @@ public class PlatformLayer extends CollisionSpace {
     boolean leftCheck = false;
     boolean rightCheck = false;
     private void keepOnScreen(GameObject[] objectArray){
+    	
     	GameObject background = gameEngine.getGameObjectFromLayer("Background","BackgroundLayer");
     	int viewX = ((ImageAssetRibbon) background.getRealisation(0)).getViewPortX();
     	for(GameObject object : objectArray){
