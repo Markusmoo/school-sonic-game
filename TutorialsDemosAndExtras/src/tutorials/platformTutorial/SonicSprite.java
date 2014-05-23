@@ -5,18 +5,19 @@
  */
 
 package tutorials.platformTutorial;
-import game.engine.*;
-import game.assets.*;
-import game.physics.*;
-import game.geometry.*;
 
-import java.awt.*;
+import game.assets.GraphicalAsset;
+import game.engine.GameLayer;
+import game.engine.GameObjectCollection;
+import game.engine.GameObjectUtilities;
+import game.geometry.Box;
+import game.physics.Body;
+import game.physics.CollisionSpace;
+
+import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
-import java.awt.image.*;
-/**
- *
- * @author Michael
- */
+import java.awt.image.BufferedImage;
+
 public class SonicSprite extends Body {
     
     public enum SonicState{ RUNNING, WAITING, JUMPING }
@@ -47,7 +48,7 @@ public class SonicSprite extends Body {
         sonicState = SonicState.WAITING;
         sonicFacing = SonicFacing.RIGHT;
         
-        GraphicalAsset sonicWaiting = assetManager.retrieveGraphicalAsset("SonicWaiting");
+        GraphicalAsset sonicWaiting = assetManager.retrieveGraphicalAsset("SonicWaiting"+id);
         setRealisationAndGeometry(sonicWaiting);
         setGeometry(new Box(0,0, sonicWaiting.width-20,sonicWaiting.height));
     }
@@ -155,9 +156,9 @@ public class SonicSprite extends Body {
         
         if(this.sonicState != sonicStateOnEntry){
             switch(sonicState){
-                case RUNNING: setRealisation("SonicRunning"); break;
-                case WAITING: setRealisation("SonicWaiting"); break;
-                case JUMPING: setRealisation("SonicJumping"); break;
+                case RUNNING: setRealisation("SonicRunning"+id); break;
+                case WAITING: setRealisation("SonicWaiting"+id); break;
+                case JUMPING: setRealisation("SonicJumping"+id); break;
                     
             }
         }

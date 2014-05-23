@@ -25,8 +25,12 @@ ImageAsset Ball5						Ball5.png
 ImageAsset Platform						Platform.png
 
 
-ImageAssetSequence SonicJumping	Animated 1 500 2 Segments 3	SonicJumping.png
-ImageAssetSequence SonicRunning	Animated -1 1000 0 Segments 8	SonicRunning.png
-ImageAsset SonicWaiting						SonicWaiting.png
+ImageAssetSequence SonicJumping1	Animated 1 500 2 Segments 3	SonicJumping1.png
+ImageAssetSequence SonicRunning1	Animated -1 1000 0 Segments 8	SonicRunning1.png
+ImageAsset SonicWaiting1						SonicWaiting1.png
+
+ImageAssetSequence SonicJumping2	Animated 1 500 2 Segments 3	SonicJumping2.png
+ImageAssetSequence SonicRunning2	Animated -1 1000 0 Segments 8	SonicRunning2.png
+ImageAsset SonicWaiting2						SonicWaiting2.png
 
 ImageAssetRibbon Background 0 0 1024 768 Horizontal 1  		Background.png        
