@@ -32,7 +32,7 @@ public class TileMapLayer extends GameLayer{
 	@Override
 	public void update(){
 		IsometricTileMap isometricTileMap = (IsometricTileMap)getGameObject("TileMap");
-		IsometricTileMap.update();
+		isometricTileMap.update();
 	}
 	
 	@Override
