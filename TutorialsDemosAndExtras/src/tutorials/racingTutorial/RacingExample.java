@@ -11,8 +11,8 @@ import game.engine.*;
  * @author Michael
  */
 public class RacingExample extends GameEngine {
-    private static final int SCREEN_WIDTH = 1920;
-    private static final int SCREEN_HEIGHT = 1080;
+    private static final int SCREEN_WIDTH = 1280;
+    private static final int SCREEN_HEIGHT = 800;
     
     public RacingExample(){
         gameStart( SCREEN_WIDTH, SCREEN_HEIGHT, 32);

@@ -1,7 +1,9 @@
 package tutorials.isometricMapTutorial;
 
 import java.awt.event.KeyEvent;
-
+import game.assets.*;
+import game.engine.*;
+import java.awt.event.*;
 import game.assets.GraphicalAsset;
 import game.engine.GameInputEventManager;
 
@@ -50,12 +52,12 @@ public class Unit {
 		}
 		if(inputEvent.keyTyped(KeyEvent.VK_LEFT)){
 			if(tileMap.tiles[mapX-(mapY%2==0?1:0)][mapY-1].isPassable){
-				newMapX += (mapY%2==0?1:0);
+				newMapX -= (mapY%2==0?1:0);
 				newMapY--;
 			}
 		}else if(inputEvent.keyTyped(KeyEvent.VK_RIGHT)){
 			if(tileMap.tiles[mapX+(mapY%2==1?1:0)][mapY+1].isPassable){
-				newMapX -= (mapY%2==1?1:0);
+				newMapX += (mapY%2==1?1:0);
 				newMapY++;
 			}
 		}
