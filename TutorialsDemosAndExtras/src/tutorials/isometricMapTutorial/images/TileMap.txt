@@ -1,0 +1,29 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Tile Map Image Assets                                                                    //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// ImageAsset name URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame URLs numURLs URL...
+
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Segments numSegments URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Array numImagesWide numImagesHigh URL
+// ImageAssetSequence name Nonanimated URLs numURLs URL...
+// ImageAssetSequence name Nonanimated Segments numSegments URL
+// ImageAssetSequence name Nonanimated Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Nonanimated Array numImagesWide, numImagesHigh URL
+// ImageAssetRibbon name viewPortX viewPortY width height scrollDirection numURLs URL...
+// ImageAssetTile name viewPortX viewPortY width height URL
+
+ImageAsset DesertTile1				DesertTile1.png
+ImageAsset DesertTile2				DesertTile2.png
+ImageAsset DesertTile3				DesertTile3.png
+
+ImageAsset MountainTile				MountainTile.png
+
+ImageAsset TreeOverlay				TreeOverlay.png
+        
+ImageAsset RocksOverlay				RocksOverlay.png
+        
+ImageAsset Archer                               Archer.png
+        
