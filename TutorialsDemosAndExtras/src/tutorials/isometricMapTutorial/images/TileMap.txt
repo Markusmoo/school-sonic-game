@@ -26,4 +26,8 @@ ImageAsset TreeOverlay				TreeOverlay.png
 ImageAsset RocksOverlay				RocksOverlay.png
         
 ImageAsset Archer                               Archer.png
+
+ImageAsset Cow                               	Cow.png
+ImageAsset Pig                               	Pig.png
+ImageAsset Chicken                              Chicken.png
         

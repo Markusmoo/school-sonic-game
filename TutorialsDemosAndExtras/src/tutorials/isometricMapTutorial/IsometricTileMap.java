@@ -80,12 +80,34 @@ public class IsometricTileMap extends GameObject{
 	}
 	
 	private void addUnits(){
-		Unit archer = new Unit("Archer", 5, 5, this);
+		//TODO Fix addition of multiple units, causes this error:
+		/*
+		Exception in thread "Thread-4" java.lang.ArrayIndexOutOfBoundsException: -1
+		at tutorials.isometricMapTutorial.Animal.update(Animal.java:46)
+		at tutorials.isometricMapTutorial.IsometricTileMap.update(IsometricTileMap.java:108)
+		at tutorials.isometricMapTutorial.TileMapLayer.update(TileMapLayer.java:35)
+		at game.engine.GameEngine.gameUpdate(GameEngine.java:684)
+		at game.engine.GameEngine.run(GameEngine.java:576)
+		at java.lang.Thread.run(Unknown Source)*/
 		
-		int positionHash = convertPositionToHash(5,5);
-		units.put(positionHash, archer);
 		
-		focalUnit = archer;
+		//Unit archer = new Unit("Archer", 5, 5, this); //TODO off for debug
+		Animal a1 = new Animal(this);
+		//Animal a2 = new Animal(this);
+		//Animal a3 = new Animal(this);
+		//Animal a4 = new Animal(this);
+		//Animal a5 = new Animal(this);
+		
+		//units.put(convertPositionToHash(5,5), archer); //TODO off for debug
+		
+		units.put(convertPositionToHash(a1.getX(),a1.getY()), a1);
+		//units.put(convertPositionToHash(a2.getX(),a2.getY()), a2);
+		//units.put(convertPositionToHash(a3.getX(),a3.getY()), a3);
+		//units.put(convertPositionToHash(a4.getX(),a4.getY()), a4);
+		//units.put(convertPositionToHash(a5.getX(),a5.getY()), a5);
+		
+		//focalUnit = archer; //TODO off for debug
+		focalUnit = a1; //TODO on for debug
 	}
 	
 	@Override

@@ -13,8 +13,10 @@ public class Unit {
 	public int mapX, mapY;
 	public double width = 0.0, height = 0.0;
 	
+	public String currentType;
+	
 	public GraphicalAsset image;
-	private IsometricTileMap tileMap;
+	protected IsometricTileMap tileMap;
 	
 	public Unit(String type, int mapX, int mapY, IsometricTileMap tileMap){
 		this.tileMap = tileMap;
@@ -29,6 +31,8 @@ public class Unit {
 		if(type.equals("Archer")){
 			image = tileMap.gameLayer.assetManager.retrieveGraphicalAsset("Archer");
 		}
+		
+		currentType = type;
 		
 		width = image.width;
 		height = image.height;
