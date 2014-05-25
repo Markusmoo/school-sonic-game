@@ -14,6 +14,14 @@ public class Tile {
 		setBaseTile(baseTileType);
 	}
 	
+	public void setPassable(boolean passable){
+		isPassable = passable;
+	}
+	
+	public boolean isPassable(){
+		return isPassable;
+	}
+	
 	public void setBaseTile(String baseTileType){
 		if(baseTileType.equals("DesertTile1")){
 			isPassable = true;

@@ -1,9 +1,6 @@
 package tutorials.isometricMapTutorial;
 
 import java.awt.event.KeyEvent;
-import game.assets.*;
-import game.engine.*;
-import java.awt.event.*;
 import game.assets.GraphicalAsset;
 import game.engine.GameInputEventManager;
 

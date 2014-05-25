@@ -4,8 +4,8 @@ import java.awt.Graphics2D;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
 import java.util.StringTokenizer;
+import java.util.concurrent.ConcurrentHashMap;
 
 import game.assets.GraphicalAsset;
 import game.engine.GameLayer;
@@ -19,7 +19,11 @@ public class IsometricTileMap extends GameObject{
 	
 	public Tile tiles[][];
 	
-	public HashMap<Integer, Unit> units = new HashMap<Integer, Unit>();
+	public final int AMOUNT_ANIMALS = 30;
+	
+	//public ConcurrentHashMap<Integer, Animal> animals = new ConcurrentHashMap<Integer, Animal>();
+	public ConcurrentHashMap<Integer, Unit> units = new ConcurrentHashMap<Integer, Unit>();
+	//public HashMap<Integer, Unit> units = new HashMap<Integer, Unit>();
 	public Unit focalUnit = null;
 	public GameLayer gameLayer;
 	
@@ -80,40 +84,23 @@ public class IsometricTileMap extends GameObject{
 	}
 	
 	private void addUnits(){
-		//TODO Fix addition of multiple units, causes this error:
-		/*
-		Exception in thread "Thread-4" java.lang.ArrayIndexOutOfBoundsException: -1
-		at tutorials.isometricMapTutorial.Animal.update(Animal.java:46)
-		at tutorials.isometricMapTutorial.IsometricTileMap.update(IsometricTileMap.java:108)
-		at tutorials.isometricMapTutorial.TileMapLayer.update(TileMapLayer.java:35)
-		at game.engine.GameEngine.gameUpdate(GameEngine.java:684)
-		at game.engine.GameEngine.run(GameEngine.java:576)
-		at java.lang.Thread.run(Unknown Source)*/
 		
+		Animal[] animals = new Animal[AMOUNT_ANIMALS];
+		for(Animal a : animals){
+			a = new Animal(this);
+			units.put(convertPositionToHash(a.getX(),a.getY()), a);
+		}
 		
-		//Unit archer = new Unit("Archer", 5, 5, this); //TODO off for debug
-		Animal a1 = new Animal(this);
-		//Animal a2 = new Animal(this);
-		//Animal a3 = new Animal(this);
-		//Animal a4 = new Animal(this);
-		//Animal a5 = new Animal(this);
-		
-		//units.put(convertPositionToHash(5,5), archer); //TODO off for debug
-		
-		units.put(convertPositionToHash(a1.getX(),a1.getY()), a1);
-		//units.put(convertPositionToHash(a2.getX(),a2.getY()), a2);
-		//units.put(convertPositionToHash(a3.getX(),a3.getY()), a3);
-		//units.put(convertPositionToHash(a4.getX(),a4.getY()), a4);
-		//units.put(convertPositionToHash(a5.getX(),a5.getY()), a5);
-		
-		//focalUnit = archer; //TODO off for debug
-		focalUnit = a1; //TODO on for debug
+		Unit archer = new Unit("Archer", 5, 5, this);
+		units.put(convertPositionToHash(5,5), archer);
+		focalUnit = archer;
 	}
 	
 	@Override
 	public void update(){
-		for(Integer positionHash : units.keySet())
+		for(Integer positionHash : units.keySet()){
 			units.get(positionHash).update();
+		}
 		
 		if(focalUnit!=null){
 			gameLayer.centerViewportOnPosition((this.x - this.width/2)+focalUnit.mapX * tileWidth, (this.y - this.height/2)+focalUnit.mapY*tileHeight/2, gameLayer.gameEngine.screenWidth/4, gameLayer.gameEngine.screenHeight/4);
@@ -157,7 +144,6 @@ public class IsometricTileMap extends GameObject{
 							&& (tileDrawY + unit.image.height/2 >= 0)
 							&& (tileDrawY - unit.image.height/2 < gameEngine.screenWidth))
 						unit.image.draw(g, tileDrawX+tileWidth/2-(int)unit.width/2, tileDrawY-tileHeight/3);
-						
 				}
 			}
 	}
