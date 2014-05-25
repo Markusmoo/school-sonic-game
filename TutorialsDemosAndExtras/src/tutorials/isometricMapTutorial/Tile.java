@@ -25,7 +25,7 @@ public class Tile {
 			isPassable = true;
 			addTileGraphic("DesertTile3",0,0);
 		}else if(baseTileType.equals("MountainTile")){
-			isPassable = true;
+			isPassable = false;
 			addTileGraphic("MountainTile",0,0);
 		}
 		
