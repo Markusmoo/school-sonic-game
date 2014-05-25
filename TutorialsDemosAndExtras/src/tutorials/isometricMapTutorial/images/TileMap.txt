@@ -23,6 +23,8 @@ ImageAsset MountainTile				MountainTile.png
 
 ImageAsset TreeOverlay				TreeOverlay.png
         
+ImageAsset HouseOverlay				HouseOverlay.png
+        
 ImageAsset RocksOverlay				RocksOverlay.png
         
 ImageAsset Archer                               Archer.png

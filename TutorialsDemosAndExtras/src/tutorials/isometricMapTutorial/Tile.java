@@ -47,6 +47,9 @@ public class Tile {
 			addTileGraphic("TreeOverlay",5,-20);
 		}else if(tileOverlayType.equals("RocksOverlay")){
 			addTileGraphic("RocksOverlay",0,0);
+		}else if(tileOverlayType.equals("HouseOverlay")){
+			isPassable = false;
+			addTileGraphic("HouseOverlay",5,-20);
 		}
 	}
 	

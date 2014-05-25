@@ -83,3 +83,13 @@ MountainTile MountainTile MountainTile MountainTile MountainTile MountainTile Mo
 7 24 TreeOverlay
 7 24 TreeOverlay
 7 24 TreeOverlay
+3 20 HouseOverlay
+7 28 HouseOverlay
+3 11 HouseOverlay
+8 10 HouseOverlay
+5 14 HouseOverlay
+6 24 HouseOverlay
+4 22 HouseOverlay
+5 23 HouseOverlay
+6 24 HouseOverlay
+7 25 HouseOverlay
