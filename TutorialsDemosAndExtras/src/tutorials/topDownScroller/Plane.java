@@ -14,8 +14,8 @@ public class Plane extends Body {
 	forwardAccelerationType = ForwardAcceleration.None;
 	
 	public enum SidewayAcceleration{Left, Right, None }
-	protected ForwardAcceleration
-	forwardAccelerationType = ForwardAcceleration.None;
+	protected SidewayAcceleration
+	SidewayAccelerationType = SidewayAcceleration.None;
 	
 	protected double forwardAcceleration;
 	protected double maxForwardVelocity;
@@ -36,7 +36,7 @@ public class Plane extends Body {
 		String projectileType;
 		
 		public Weapon(String type, double xOffset, double yOffset, double rotation){
-			this.projectileType = true;
+			this.projectileType = type;
 			this.xOffset = xOffset;
 			this.yOffset = yOffset;
 			this.rotation = rotation;

@@ -133,7 +133,7 @@ public class TopDownScrollerLayer extends CollisionSpace {
 		backgroundWater.getRealisation(0).update();
 	}
 	
-	private void updatePlayer(){
+	private void updatePlayerPlane(){
 		Plane playerPlane = (Plane)getGameObject("PlayerPlane");
 		if(playerPlane == null)return;
 		this.testForObstacleCollision(playerPlane); //TODO Checkout source code.
