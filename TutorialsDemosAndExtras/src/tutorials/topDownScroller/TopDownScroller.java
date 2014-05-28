@@ -1,12 +1,18 @@
 package tutorials.topDownScroller;
 import game.engine.GameEngine;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 
 
 public class TopDownScroller extends GameEngine {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static final int SCREEN_WIDTH =1024;
 	private static final int SCREEN_HEIGHT = 768;
 	
@@ -22,11 +28,10 @@ public class TopDownScroller extends GameEngine {
 		return true;
 	}
 	
-	//cant find out why this is wrong because im Dyslexic 
 	protected boolean buildInitialGameLayers(){
-		TopDownScollerLayer spaceLayer = new TopDownScollerLayer(this);
+		TopDownScrollerLayer spaceLayer = new TopDownScrollerLayer(this);
 		addGameLayer(spaceLayer);
-		
+		return true;
 	}
 	
 	protected void considerInput(){
@@ -58,7 +63,7 @@ public class TopDownScroller extends GameEngine {
 		
 	}
 	public static void main(String[]args){
-		TopDownScroller instance = new TopDownScroller();
+		new TopDownScroller();
 	}
 
 }

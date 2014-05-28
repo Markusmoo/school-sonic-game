@@ -1,0 +1,33 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Top Down Scroller Game Assets                                                            //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// ImageAsset name URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame URLs numURLs URL...
+
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Segments numSegments URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Array numImagesWide numImagesHigh URL
+// ImageAssetSequence name Nonanimated URLs numURLs URL...
+// ImageAssetSequence name Nonanimated Segments numSegments URL
+// ImageAssetSequence name Nonanimated Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Nonanimated Array numImagesWide, numImagesHigh URL
+// ImageAssetRibbon name viewPortX viewPortY width height scrollDirection numURLs URL...
+// ImageAssetTile name viewPortX viewPortY width height URL
+
+
+ImageAssetTile BackgroundWater 0 0 1024 768			WaterTile.png
+ 
+ImageAsset Plane						Plane.png
+ImageAsset EnergyBall						EnergyBall.png
+
+ImageAssetSequence EnergyBallDisappear   Animated 1 250 2 Segments 3 EnergyBallDisappear.png
+ImageAssetSequence EnergyBallExplode     Animated 1 200 9 Segments 10 EnergyBallExplode.png
+
+ImageAsset Island						Island.png
+
+ImageAsset BarrageBalloon					Obstacle.png
+                
+ImageAsset Cloud1						Cloud1.png
+ImageAsset Cloud2						Cloud2.png
+  
