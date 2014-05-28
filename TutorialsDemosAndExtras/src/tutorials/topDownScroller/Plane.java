@@ -100,6 +100,55 @@ public class Plane extends Body {
 		if(inputEvent.keyPressed[KeyEvent.VK_SPACE] == true)
 			considerFiring();
 	}
-	
-	
-}
+	private void updatePlaneMovement(){
+		switch(forwardAccelerationType){
+		case Positive:
+			velocityy -= forwardAcceleration;
+			if(velocityy < -maxForwardVelocity)
+				velocityy = backwardAcceleration;
+			break;
+		case Negative:
+			if(Math.abs(velocityy)< dampeningVelocity)
+				velocityy = 0.0;
+			else 
+				velocityy += (velocityy > 0.0 ? -dampeningVelocity : dampeningVelocity);
+			break;
+		}	
+			switch(sidewayAccelerationType){
+			case Right:
+				velocityx += sidewayAcceleration;
+				if(velocityx > maxSidewaysVelocity)
+					velocityx = maxSidewaysVelocity;
+				break;
+			case Left:
+				velocityx -= sidewayAcceleration;
+				if(velocityx < - maxSidewaysVelocity)
+					velocityx = -maxSidewaysVelocity;
+				break;
+			case None:
+				if(Math.abs(velocityx)< dampeningVelocity)
+					velocityx = 0.0;
+				else
+					velocityx += (velocityx > 0.0 ? -dampeningVelocity : dampeningVelocity);
+				break;
+			}
+			
+			if(rotation != 0.0){
+				angularVelocity = 0.0;
+				if(Math.abs(rotation)< 0.01)
+					rotation = 0.0;
+				else 
+					rotation -= 0.01 * Math.signum(rotation);
+			}
+		}
+	protected void considerFiring(){
+		long currentTime = System.nanoTime()/1000000;
+		for(Weapon weapon : planeWeapons){
+			if(weapon.lastFireTime + weapon.fireDelay < currentTime){
+				weapon.lastFireTime = currentTime;
+				
+				gameLayer.queueGameObjectToAdd(new Projectile(weapon.projectileType,x+ weapon.xOffset, y + weapon.xOffset,y+weapon.yOffset,weapon.roation, gameLayer), "Projectiles");
+			}
+		}
+	}
+	}
