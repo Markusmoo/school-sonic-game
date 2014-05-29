@@ -147,7 +147,7 @@ public class Plane extends Body {
 			if(weapon.lastFireTime + weapon.fireDelay < currentTime){
 				weapon.lastFireTime = currentTime;
 				
-				gameLayer.queueGameObjectToAdd(new Projectile(weapon.projectileType,x+ weapon.xOffset, y + weapon.xOffset,y+weapon.yOffset,weapon.roation, gameLayer), "Projectiles");
+				gameLayer.queueGameObjectToAdd(new Projectile(weapon.projectileType, x+weapon.xOffset, y+weapon.yOffset,weapon.rotation, gameLayer), "Projectiles");
 			}
 		}
 	}

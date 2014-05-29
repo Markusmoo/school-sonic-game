@@ -154,7 +154,7 @@ public class TopDownScrollerLayer extends CollisionSpace {
 		GameObjectCollection projectiles = getGameObjectCollection("Projectiles");
 		
 		for(int idx=0; idx<projectiles.size; idx++){
-			Projectile projectile = (Projectile)projectile.gameObjects[idx];
+			Projectile projectile = (Projectile)projectiles.gameObjects[idx];
 			if(this.testForObstacleCollision(projectile))
 				projectile.triggerProjectileHit();
 			projectile.update();
