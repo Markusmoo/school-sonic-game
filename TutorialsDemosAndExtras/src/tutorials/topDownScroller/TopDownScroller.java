@@ -24,7 +24,7 @@ public class TopDownScroller extends GameEngine {
 	}
 	
 	public boolean buildAssetManager(){
-		assetManager.loadAssetsFromFile(this.getClass().getResource("imgaes/TopDownScrollerAssets.txt"));
+		assetManager.loadAssetsFromFile(this.getClass().getResource("images/TopDownScrollerAssets.txt"));
 		return true;
 	}
 	

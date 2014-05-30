@@ -123,12 +123,12 @@ public class TopDownScrollerLayer extends CollisionSpace {
 		if(gamePosition + gameEngine.screenHeight > GAME_HEIGHT)return;
 		
 		gamePosition += GAME_SCROLLSPEED;
-		viewPortLayerY += GAME_SCROLLSPEED;
+		viewPortLayerY -= GAME_SCROLLSPEED;
 		
 		gameEngine.getGameLayer("IslandLayer").viewPortLayerY -= GAME_SCROLLSPEED * PARALLAX_VALUE_ISLANDS;
 		gameEngine.getGameLayer("CloudLayer").viewPortLayerY -= GAME_SCROLLSPEED * PARALLAX_VALUE_CLOUDS;
 		
-		GameObject backgroundWater = gameEngine.getGameObjectFromLayer("BackgroundLayer", "WaterLayer");
+		GameObject backgroundWater = gameEngine.getGameObjectFromLayer("BackgroundWater", "WaterLayer");
 		((ImageAssetTile)backgroundWater.getRealisation(0)).setViewPort(gameEngine.screenWidth/2, (int)(viewPortLayerY*PARALLAX_VALUE_ISLANDS));
 		backgroundWater.getRealisation(0).update();
 	}
@@ -162,7 +162,7 @@ public class TopDownScrollerLayer extends CollisionSpace {
 	}
 	
 	private boolean testForObstacleCollision(GameObject object){
-		GameObjectCollection obstacles = getGameObjectCollection("obstacles");
+		GameObjectCollection obstacles = getGameObjectCollection("Obstacles");
 		for(int ido = 0; ido < obstacles.size; ido++){
 			GameObject obstacle = obstacles.gameObjects[ido];
 			if(GameObjectCollider.isIntersection(object,  obstacle)){
