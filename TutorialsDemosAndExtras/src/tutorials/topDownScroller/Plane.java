@@ -87,27 +87,43 @@ public class Plane extends Body {
 	public void setSidewayAcceleration(SidewayAcceleration sidewayAccelerationType){
 		this.sidewayAccelerationType = sidewayAccelerationType;
 	}
+	public void update(){
+		updatePlayerInput();
+		updatePlaneMovemenet();
+	}
 	
 	@SuppressWarnings("static-access")
 	public void updatePlayerInput(){
 		if(inputEvent.keyPressed[KeyEvent.VK_UP] && !inputEvent.keyPressed[KeyEvent.VK_DOWN])
 			setForwardAcceleration(Plane.ForwardAcceleration.Positive);
+		else if(inputEvent.keyPressed[KeyEvent.VK_DOWN] && !inputEvent.keyPressed[KeyEvent.VK_UP])
+			setForwardAcceleration(Plane.ForwardAcceleration.Negative);
+		else 
+			setForwardAcceleration(Plane.ForwardAcceleration.None);
+		
+		if(inputEvent.keyPressed[KeyEvent.VK_RIGHT] && !inputEvent.keyPressed[KeyEvent.VK_LEFT])
+			setSidewayAcceleration(Plane.SidewayAcceleration.Right);
 		else if(inputEvent.keyPressed[KeyEvent.VK_LEFT] && !inputEvent.keyPressed[KeyEvent.VK_RIGHT])
 			setSidewayAcceleration(Plane.SidewayAcceleration.Left);
-		else 
+		else
 			setSidewayAcceleration(Plane.SidewayAcceleration.None);
 		
 		if(inputEvent.keyPressed[KeyEvent.VK_SPACE] == true)
 			considerFiring();
 	}
-	private void updatePlaneMovement(){
+	private void updatePlaneMovemenet(){
 		switch(forwardAccelerationType){
 		case Positive:
 			velocityy -= forwardAcceleration;
 			if(velocityy < -maxForwardVelocity)
-				velocityy = backwardAcceleration;
+				velocityy = maxForwardVelocity;
 			break;
 		case Negative:
+			velocityy += backwardAcceleration;
+			if(velocityy > backwardAcceleration)
+				velocityy = backwardAcceleration;
+			break;
+		case None:
 			if(Math.abs(velocityy)< dampeningVelocity)
 				velocityy = 0.0;
 			else 
