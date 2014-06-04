@@ -71,25 +71,24 @@ public class Plane extends Body {
 		
 		planeWeapons.add(new Weapon("Bullet",-50,-90,-0.3));
 		planeWeapons.add(new Weapon("Bullet",-40,-95,0.0));
-		planeWeapons.add(new Weapon("Bullet",40,-95,0.));
+		planeWeapons.add(new Weapon("Bullet",40,-95,0.0));
 		planeWeapons.add(new Weapon("Bullet",50,-90,0.3));
 		
 		setMass(100.0);
-		
-		
-		
 	}
 	
-	public void setForwardAcceleration(ForwardAcceleration forwardAcclerationType){
+	public void setForwardAcceleration(ForwardAcceleration forwardAccelerationType){
 		this.forwardAccelerationType = forwardAccelerationType;
 	}
 	
 	public void setSidewayAcceleration(SidewayAcceleration sidewayAccelerationType){
 		this.sidewayAccelerationType = sidewayAccelerationType;
 	}
+	
+	@Override
 	public void update(){
 		updatePlayerInput();
-		updatePlaneMovemenet();
+		updatePlaneMovement();
 	}
 	
 	@SuppressWarnings("static-access")
@@ -111,7 +110,9 @@ public class Plane extends Body {
 		if(inputEvent.keyPressed[KeyEvent.VK_SPACE] == true)
 			considerFiring();
 	}
-	private void updatePlaneMovemenet(){
+	
+	//Proof read up to here TODO
+	private void updatePlaneMovement(){
 		switch(forwardAccelerationType){
 		case Positive:
 			velocityy -= forwardAcceleration;

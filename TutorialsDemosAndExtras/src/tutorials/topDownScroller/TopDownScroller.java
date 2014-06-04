@@ -12,7 +12,7 @@ public class TopDownScroller extends GameEngine {
 	/**
 	 * 
 	 */
-	//private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	private static final int SCREEN_WIDTH =1024;
 	private static final int SCREEN_HEIGHT = 768;
 	
@@ -63,7 +63,7 @@ public class TopDownScroller extends GameEngine {
 		
 	}
 	public static void main(String[]args){
-		TopDownScroller instance = new TopDownScroller();
+		new TopDownScroller();
 	}
 
 }

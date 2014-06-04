@@ -31,7 +31,7 @@ public class Animal extends Unit {
 	}
 	
 	public void update(){
-		if(Math.random()>0.5){
+		if(Math.random()>0.95){
 			int newMapX = mapX, newMapY = mapY;
 			int moveDir = rand.nextInt(4);
 			
