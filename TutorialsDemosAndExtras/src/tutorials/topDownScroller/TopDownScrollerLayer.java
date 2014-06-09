@@ -14,7 +14,7 @@ public class TopDownScrollerLayer extends CollisionSpace {
 	
 	private static final double PARALLAX_VALUE_ISLANDS = 0.4;
 	private static final double PARALLAX_VALUE_CLOUDS = 0.8;
-	private static final double PARALLAX_VALUE_GAMEOBJECTS = 1.0;
+	//private static final double PARALLAX_VALUE_GAMEOBJECTS = 1.0;
 	
 	private static final double GAME_HEIGHT = 20000;
 	private static final double GAME_SCROLLSPEED = 4.0;
