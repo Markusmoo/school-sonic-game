@@ -26,6 +26,8 @@ public class TopDownScrollerLayer extends CollisionSpace {
 	private double flyRegionWidth = gameEngine.screenWidth - 120;
 	private double flyRegionHeight = gameEngine.screenHeight - 150;
 	
+	public static Plane playerPlane;
+	
 	public TopDownScrollerLayer(GameEngine gameEngine){
 		super("TopDownScrollerLayer", gameEngine);
 		
@@ -135,9 +137,15 @@ public class TopDownScrollerLayer extends CollisionSpace {
 	}
 	
 	private void updatePlayerPlane(){
-		Plane playerPlane = (Plane)getGameObject("PlayerPlane");
+		playerPlane = (Plane)getGameObject("PlayerPlane");
 		if(playerPlane == null)return;
-		this.testForObstacleCollision(playerPlane); //TODO Checkout source code.
+		if(this.testForObstacleCollision(playerPlane)){
+			if(TopDownScroller.HIT_POINTS.equals("* * *")) TopDownScroller.HIT_POINTS = "* *";
+			else if(TopDownScroller.HIT_POINTS.equals("* *")) TopDownScroller.HIT_POINTS = "*";
+			else if(TopDownScroller.HIT_POINTS.equals("*")){ TopDownScroller.HIT_POINTS = "";
+				this.queueGameObjectToRemove(playerPlane);
+			}
+		}
 		playerPlane.update();
 		
 		if(playerPlane.x < viewPortLayerX + flyRegionOffsetX - flyRegionWidth/2)
@@ -162,12 +170,15 @@ public class TopDownScrollerLayer extends CollisionSpace {
 		}
 	}
 	
+	public static boolean canRemovePlane = false;
 	private boolean testForObstacleCollision(GameObject object){
 		GameObjectCollection obstacles = getGameObjectCollection("Obstacles");
 		for(int ido = 0; ido < obstacles.size; ido++){
 			GameObject obstacle = obstacles.gameObjects[ido];
 			if(GameObjectCollider.isIntersection(object,  obstacle)){
-				this.queueGameObjectToRemove(obstacle);
+				if(!(obstacle instanceof Plane)){
+					obstacle.setRealisation("BarrageExplode");
+				}
 				return true;
 			}
 		}

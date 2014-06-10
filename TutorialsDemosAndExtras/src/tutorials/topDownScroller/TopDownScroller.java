@@ -12,6 +12,8 @@ public class TopDownScroller extends GameEngine {
 	private static final long serialVersionUID = 1L;
 	private static final int SCREEN_WIDTH =1024;
 	private static final int SCREEN_HEIGHT = 768;
+	public static int SCORE = 0;
+	public static String HIT_POINTS = "* * *";
 	
 	private boolean displayHelpOverlay = false ;
 	
@@ -60,6 +62,11 @@ public class TopDownScroller extends GameEngine {
 			g.drawString("Space - Fire", 10,90);
 		}
 		
+		g.setFont(new Font("MONOSPACE",Font.BOLD,34));
+		g.setColor(Color.BLACK);
+		g.drawString("Score: "+SCORE, (SCREEN_WIDTH/2)-30, 30);
+		g.setColor(Color.red);
+		g.drawString("Hitpoints: "+HIT_POINTS, (SCREEN_WIDTH/2)-30, SCREEN_HEIGHT-30);
 	}
 	public static void main(String[] args){
 		new TopDownScroller();

@@ -23,6 +23,7 @@ ImageAsset EnergyBall						EnergyBall.png
 
 ImageAssetSequence EnergyBallDisappear   Animated 1 250 2 Segments 3 EnergyBallDisappear.png
 ImageAssetSequence EnergyBallExplode     Animated 1 200 9 Segments 10 EnergyBallExplode.png
+ImageAssetSequence BarrageExplode        Animated 1 500 6 Segments 7 ObstacleExplode.png
 
 ImageAsset Island						Island.png
 
