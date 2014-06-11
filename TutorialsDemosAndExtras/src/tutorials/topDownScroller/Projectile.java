@@ -57,6 +57,7 @@ public class Projectile extends Body{
 		canIntersectOtherGraphicalObjects = false;
 		
 		projectileTriggerTime = System.nanoTime();
+		TopDownScroller.SCORE++;
 	}
 	
 	private void triggerProjectDisappear(){

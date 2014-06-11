@@ -18,15 +18,16 @@
 
 ImageAssetTile BackgroundWater 0 0 1024 768			WaterTile.png
  
-ImageAsset Plane						Plane.png
-ImageAsset EnergyBall						EnergyBall.png
+ImageAsset Plane						 Plane.png
+ImageAsset EnergyBall					 EnergyBall.png
 
 ImageAssetSequence EnergyBallDisappear   Animated 1 250 2 Segments 3 EnergyBallDisappear.png
 ImageAssetSequence EnergyBallExplode     Animated 1 200 9 Segments 10 EnergyBallExplode.png
+ImageAssetSequence BarrageExplode        Animated 1 500 6 Segments 7 ObstacleExplode.png
 
 ImageAsset Island						Island.png
 
-ImageAsset BarrageBalloon					Obstacle.png
+ImageAsset BarrageBalloon				Obstacle.png
                 
 ImageAsset Cloud1						Cloud1.png
 ImageAsset Cloud2						Cloud2.png

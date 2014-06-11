@@ -117,7 +117,7 @@ public class Plane extends Body {
 		case Positive:
 			velocityy -= forwardAcceleration;
 			if(velocityy < -maxForwardVelocity)
-				velocityy = maxForwardVelocity;
+				velocityy = -maxForwardVelocity;
 			break;
 		case Negative:
 			velocityy += backwardAcceleration;
@@ -168,4 +168,4 @@ public class Plane extends Body {
 			}
 		}
 	}
-	}
+}
