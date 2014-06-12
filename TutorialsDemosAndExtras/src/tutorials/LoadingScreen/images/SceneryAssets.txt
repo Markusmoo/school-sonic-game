@@ -1,0 +1,27 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Scenery Core common assets                                                                 //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// ImageAsset name URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame URLs numURLs URL...
+
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Segments numSegments URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Array numImagesWide numImagesHigh URL
+// ImageAssetSequence name Nonanimated URLs numURLs URL...
+// ImageAssetSequence name Nonanimated Segments numSegments URL
+// ImageAssetSequence name Nonanimated Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Nonanimated Array numImagesWide, numImagesHigh URL
+// ImageAssetRibbon name viewPortX viewPortY width height scrollDirection numURLs URL...
+// ImageAssetTile name viewPortX viewPortY width height URL
+
+
+ImageAsset Scenery1 					Scenery/Scenery1.png
+ImageAsset Scenery2 					Scenery/Scenery2.png
+ImageAsset Scenery3 					Scenery/Scenery3.png
+ImageAsset Scenery4 					Scenery/Scenery4.png
+ImageAsset Scenery5 					Scenery/Scenery5.png
+ImageAsset Scenery6 					Scenery/Scenery6.png
+ImageAsset Scenery7 					Scenery/Scenery7.png
+ImageAsset Scenery8 					Scenery/Scenery8.png
+ImageAsset Scenery9 					Scenery/Scenery9.png

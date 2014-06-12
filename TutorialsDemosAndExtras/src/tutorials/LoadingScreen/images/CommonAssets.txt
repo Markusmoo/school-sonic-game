@@ -1,0 +1,25 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Loading Screen Core common assets                                                        //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// ImageAsset name URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame URLs numURLs URL...
+
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Segments numSegments URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Array numImagesWide numImagesHigh URL
+// ImageAssetSequence name Nonanimated URLs numURLs URL...
+// ImageAssetSequence name Nonanimated Segments numSegments URL
+// ImageAssetSequence name Nonanimated Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Nonanimated Array numImagesWide, numImagesHigh URL
+// ImageAssetRibbon name viewPortX viewPortY width height scrollDirection numURLs URL...
+// ImageAssetTile name viewPortX viewPortY width height URL
+
+
+ImageAsset MouseCrosshair 					Common/MouseCrosshair.png
+ImageAsset MousePointer 					Common/MousePointer.png
+
+ImageAssetSequence GUIFontLarge Nonanimated Array 26 4 		Common/GUIFontLarge.png
+ImageAssetSequence GUIFont Nonanimated Array 26 4 		Common/GUIFont.png
+ImageAssetSequence GUIFontSmall Nonanimated Array 26 4 		Common/GUIFontSmall.png
+

@@ -1,0 +1,29 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Space Core common assets                                                                 //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// ImageAsset name URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame URLs numURLs URL...
+
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Segments numSegments URL
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Animated playCount animationPeriod homeFrame Array numImagesWide numImagesHigh URL
+// ImageAssetSequence name Nonanimated URLs numURLs URL...
+// ImageAssetSequence name Nonanimated Segments numSegments URL
+// ImageAssetSequence name Nonanimated Rectangles URL numRectangles Rectangle...
+// ImageAssetSequence name Nonanimated Array numImagesWide, numImagesHigh URL
+// ImageAssetRibbon name viewPortX viewPortY width height scrollDirection numURLs URL...
+// ImageAssetTile name viewPortX viewPortY width height URL
+
+
+ImageAsset Space1 					Space/Space1.png
+ImageAsset Space2 					Space/Space2.png
+ImageAsset Space3 					Space/Space3.png
+ImageAsset Space4 					Space/Space4.png
+ImageAsset Space5 					Space/Space5.png
+ImageAsset Space6 					Space/Space6.png
+ImageAsset Space7 					Space/Space7.png
+ImageAsset Space8 					Space/Space8.png
+ImageAsset Space9 					Space/Space9.png
+ImageAsset Space10 					Space/Space10.png
+ImageAsset Space11 					Space/Space11.png

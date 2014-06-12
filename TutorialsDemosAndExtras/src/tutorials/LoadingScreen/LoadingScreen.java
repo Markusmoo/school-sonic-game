@@ -15,7 +15,7 @@ public class LoadingScreen extends GameEngine {
 	}
 	
 	public static void main(String[] args){
-		LoadingScreen instance = new LoadingScreen();
+		new LoadingScreen();
 	}
 	
 	protected boolean buildAssetManager(){
